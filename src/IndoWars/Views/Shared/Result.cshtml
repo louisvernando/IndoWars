@@ -1,0 +1,46 @@
+﻿@model IndoWars.ViewModels.AnswerViewModel
+
+@{
+    ViewBag.Title = "Quiz";
+}
+
+<section>
+    <div class="container">
+        <div>
+            <h1 class="heading">Quiz Result</h1>
+            <div class="headul"></div>
+        </div>
+        @{
+            if (Model.Score >= 70)
+            {
+                <div style="text-align:center">
+                    <h2 class="heading" style="color:green">Selamat anda mendapatkan Nilai @Model.Score !</h2>
+                    @if (Model.QuestionId == 0)
+                    {
+                    <p style="text-align:center">Dengan ini anda dapat melanjutkan ke chapter berikutnya</p>
+                    <a asp-controller="Chapter" asp-action="HindiaBelanda" class="btn btn-success">Lanjutkan</a>
+                    }
+                    else if (Model.QuestionId == 1)
+                    {
+                    <p style="text-align:center">Dengan ini anda dapat melanjutkan ke chapter berikutnya</p>
+                    <a asp-controller="Chapter" asp-action="TarakanBattle" class="btn btn-success">Lanjutkan</a>
+                    }
+                    else
+                    {
+                    <p style="text-align:center">Terima Kasih telah memainkan Game ini! tunggu kelanjutan Chapternya ya</p>
+                    <a asp-controller="App" asp-action="Index" class="btn btn-success">Home</a>
+                    }
+                </div>
+            }
+            else
+            {
+                <div style="text-align:center">
+                    <h2 class="heading" style="color:red">anda mendapatkan Nilai @Model.Score</h2>
+                    <p style="text-align:center">Batas minimal untuk melewati Chapter adalah 60, anda dapat mengulangi permain dengan klik tombol dibawah ini</p>
+                    <a asp-controller="Chapter" asp-action="Introduction" class="btn btn-success">Retry</a>
+                </div>
+            }
+        }
+    </div>
+</section>
+

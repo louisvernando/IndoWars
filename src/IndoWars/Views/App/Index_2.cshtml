@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .jumbotron {
+        background-color: slategrey;
+    }
+</style>
+@section scripts{
+    <script src="~/lib/angular/angular.min.js"></script>
+
+}
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <img src="~/images/logo.png" width="600px" height="auto" class="animated fadeIn"></img>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-16 col-sm-offset-3 col-sm-12">
+                <div class="btn-group btn-group-lg">
+                    <a href="#Help" class="btn btn-primary animated bounceInLeft" id="bannerBtn">
+                        <span class="fa fa-question-circle"></span> How To Play ?
+                    </a>
+                    <a asp-controller="Chapter" asp-action="Introduction" class="btn btn-success animated bounceInDown" id="bannerBtn">
+                        <span class="fa fa-play-circle"></span> Play
+                    </a>
+                    <a href="#Chapter" class="btn btn-primary animated bounceInRight" id="bannerBtn">
+                        <span class="fa fa-list"></span> Chapter List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("News")
+
+@Html.Partial("Help")
+
+@Html.Partial("ChapterList")

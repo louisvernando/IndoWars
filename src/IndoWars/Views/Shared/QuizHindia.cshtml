@@ -1,0 +1,81 @@
+﻿@using System.Collections
+@using System.Threading.Tasks
+@using IndoWars.Models
+@model IndoWars.ViewModels.QuestionViewModel
+
+@{
+    ViewBag.Title = "Dutch East Indies Campaign Quiz";
+}
+
+<section>
+    <div class="container">
+        <div>
+            <h1 class="heading">@ViewBag.Title</h1>
+            <div class="headul"></div>
+            <div class="subheading">Pilihan Ganda</div>
+        </div>
+        <div>
+            @using (Html.BeginForm("CheckAnswerHindia","Quiz"))
+            {
+                <ol class="h3">
+                    @foreach (var item in Model.QHindiaBelanda)
+                    {
+                        <li>
+                            <h3>@item.Questions</h3>
+                            @foreach (aHindiaBelanda answer in item.Answer)
+                            {
+                                <div>
+                                    @switch (item.Id)
+                                    {
+                                        case 1:
+                                            @Html.RadioButtonFor(s => @Model.SelectedAnswer1, answer.Choices)
+                                            <label>@answer.Choices ) @answer.Text</label>
+                                            break;
+                                        case 2:
+                                            @Html.RadioButtonFor(s => @Model.SelectedAnswer2, answer.Choices)
+                                            <label>@answer.Choices ) @answer.Text</label>
+                                            break;
+                                        case 3:
+                                            @Html.RadioButtonFor(s => @Model.SelectedAnswer3, answer.Choices)
+                                            <label>@answer.Choices ) @answer.Text</label>
+                                            break;
+                                        case 4:
+                                            @Html.RadioButtonFor(s => @Model.SelectedAnswer4, answer.Choices)
+                                            <label>@answer.Choices ) @answer.Text</label>
+                                            break;
+                                        case 5:
+                                            @Html.RadioButtonFor(s => @Model.SelectedAnswer5, answer.Choices)
+                                            <label>@answer.Choices ) @answer.Text</label>
+                                            break;
+                                        case 6:
+                                            @Html.RadioButtonFor(s => @Model.SelectedAnswer6, answer.Choices)
+                                            <label>@answer.Choices ) @answer.Text</label>
+                                            break;
+                                        case 7:
+                                            @Html.RadioButtonFor(s => @Model.SelectedAnswer7, answer.Choices)
+                                            <label>@answer.Choices ) @answer.Text</label>
+                                            break;
+                                        case 8:
+                                            @Html.RadioButtonFor(s => @Model.SelectedAnswer8, answer.Choices)
+                                            <label>@answer.Choices ) @answer.Text</label>
+                                            break;
+                                        case 9:
+                                            @Html.RadioButtonFor(s => @Model.SelectedAnswer9, answer.Choices)
+                                            <label>@answer.Choices ) @answer.Text</label>
+                                            break;
+                                        case 10:
+                                            @Html.RadioButtonFor(s => @Model.SelectedAnswer10, answer.Choices)
+                                            <label>@answer.Choices ) @answer.Text</label>
+                                            break;
+                                    }
+                                </div>
+                            }
+                            <br/>
+                        </li>
+                    }
+                </ol>
+                <input type="submit" value="Submit Answer" class="btn btn-success"/>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,115 @@
+﻿@model IndoWars.ViewModels.UserViewModel
+
+@{
+    ViewBag.Title = "Battle of Tarakan";
+}
+
+@{
+    if (Model.ChapterProgress < 2)
+    {
+        <div class="container">
+            <section style="text-align:center">
+                <h2 class="heading">Maaf anda belum dapat memasuki Chapter ini</h2>
+                <div class="headul"></div>
+                <p class="subheading">Silahkan pilih chapter sebelumnya</p>
+                <a asp-controller="App" asp-action="Index" class="btn btn-success">Home</a>
+            </section>
+        </div>
+    }
+    else
+    {
+        <section>
+            <div class="container">
+                <section>
+                    <a asp-controller="Chapter" asp-action="HindiaBelanda" class="btn btn-primary" style="float: left"><i class="fa fa-arrow-left"></i> Prev Chapter</a>
+                </section>
+                <div style="text-align:center"><iframe width="700" height="400" src="https://www.youtube.com/embed/WfEZQ9RxtgM" frameborder="0" allowfullscreen></iframe></div>
+                <br />
+                <h1 class="heading">Battle of Tarakan</h1>
+                <div class="headul"></div>
+                <p class="subheading">Perang Tarakan</p>
+                <section>
+                    <h2>Apa itu Tarakan?</h2>
+                    <a href="~/img/tarakan/tarakan.png">
+                        <img class="inviewport animated delay1" data-effect="bounceInBig" src="~/img/tarakan/tarakan.png"
+                             style="float:right; height: 150px; width: auto; margin-left: 20px;"
+                             title="Geografical Tarakan" data-fancybox-group="gallery" />
+                    </a>
+                    <p>
+                        Tarakan merupakan sebuah pulau kecil berbentuk segitiga yang terletak di utara barat seberang pulau borneo. Meskipun tarakan adalah sebuah pulau kecil, namun pulau ini mempunyai 700 tambang minyak, pabrik, dan bandar udara yang membuat pulau ini menjadi salah satu
+                        target utama pasukan Jepang saat itu. Pulai ini mempunyai panjang sekitar 15 mils(24 km) yang dihitung dari sudut utara sampai selatan dan lebar 11 mils (18 km), hampir semua garis pantai pulai ini berawa dan pada tahun 1945 sendiri tumbuhan mangrove tumbuh di bagian utara sampai
+                        pertengahan pulau ini yang membentang antara 1 sampai 2 mils (1.6 - 3.2 km) dipulau.
+                    </p>
+                    <hr style="border-top: 1px dashed #8c8b8b;" />
+                    <h2>Penyerangan pasukan Jepang (1942)</h2>
+                    <a href="~/img/tarakan/sekutulanding.jpg">
+                        <img class="inviewport animated delay1" data-effect="bounceInBig" src="~/img/tarakan/sekutulanding.jpg"
+                             style="float:right; height: 200px; width: auto; margin-left: 20px;"
+                             title="Pasukan Jepang mendarat di Tarakan" data-fancybox-group="gallery" />
+                    </a>
+                    <p>
+                        Pada tanggal 10 Januari 1942, sesaat setelah pesawat terbang belanda "Dornier Do 24K" melihat adanya armada Jepang menuju Tarakan, Komandan dari pasukan Tarakan langsung memberikan perintah untuk menghancurkan semua instalasi minyak di pulau tersebut.
+                        Sayap kanan dari pasukan Jepang "Sakaguchi Detachment" mendarat di pantai timur tarakan saat tengah malam pada tanggal 11 januari 1942, yang diikuti oleh "2nd Kure Special Naval Landing Force". Pasukan "KNIL" Belanda yang berjaga di Tarakan pun mencoba untuk melawan namun karena jumlah pasukan
+                        Jepang yang jauh lebih banyak dari mereka, KNIL pun menyerah pada pagi hari tanggal 12 Januari. Semua tahanan perang yang ditangkap oleh jepang ditenggelamkan atas balasan karena menghancurkan instalasi minyak yang terdapat di pulau ini, sebuah aksi yang nantinya diulang kembali pada Perang Balikpapan
+                        nantinya. Pulau tarakan tetap dipegang Jepang hingga bulan Mei 1945, dimana pasukan Australia menyerang Borneo untuk membebaskannya.
+                    </p>
+                    <blockquote>
+                        <a href="~/img/tarakan/malnutrition.jpg">
+                            <img class="inviewport animated delay1" data-effect="bounceInBig" src="~/img/tarakan/malnutrition.jpg"
+                                 style="float:right; height: 150px; width: auto; margin-left: 20px;"
+                                 title="Kondisi penduduk yang mengalami malnutrisi" data-fancybox-group="gallery" />
+                        </a>
+                        <h3>
+                            <span class="fa fa-question-circle"></span> Taukah Kamu?
+                        </h3>
+                        <p>
+                            Jumlah pasukan yang banyak di pulau Tarakan membuat suplai makanan di pulau tersebut semakin menipis dan membuat hampir 5000 rakyat
+                            Tarakan kekurangan makan dan menderita malnutrisi, dan dengan paksa membuat hampir 300 Wanita Jawa untuk menjadi "Wanita Penghibur".
+                        </p>
+                        <small>Tarakan Truth</small>
+                    </blockquote>
+                    <hr style="border-top: 1px dashed #8c8b8b;" />
+                    <h2>Operation Oboe One (1945)</h2>
+                    <a href="~/img/tarakan/operationoboe.JPG">
+                        <img class="inviewport animated delay1" data-effect="bounceInBig" src="~/img/tarakan/operationoboe2.jpg"
+                             style="float:right; height: 300px; width: auto; margin-left: 20px;"
+                             title="Pasukan Australia mendarat di Tarakan" data-fancybox-group="gallery" />
+                    </a>
+                    <p>
+                        Operasi Oboe One merupakan sebuah ekspedisi yang dilakukan oleh pasukan Australia untuk mengamankan dan mengembangkan lintasan udara yang nantinya akan membantu cover perang udara di beberapa daerah seperti Brunei, Labuan dan Balikpapan.
+                        Tujuan keduanya adalah untuk mengamankan tambang minyak dan mengoperasikannya sebagai sumber minyak bagi pasukan sekutu. Penyerangan dimulai dengan mendaratnya angkatan laut 2/23rd Battalion dan 2/48th Battalion pada jam 08.00 pagi tanggal 1 may yang dicover
+                        dengan pengeboman udara dan laut, The 2/23rd Battalion yang berangkat dari American LVTs pergi melewati rawa di "Green Beach" yang berlokasi pada sudut selatan dari pantai sambil mengalahkan beberapa pos kecil Jepang yang berlokasi di lembah sekitar Lingkas.
+                        Berbeda dengan The 2/23rd Battalion, the 2/48th Battalion mengalami pendaratan yang lebih gampang di "Red Beach" yang berlokasi di sudut utara pantai dengan hampir seluruh pasukan turun di tanah kering. The Battalion maju menuju utara melewati the "Anzac Highway" dan
+                        secara cepat mengamankan beberapa kotak obat dibelakang pantai dan juga beberapa tanki minyak. Pada saat hari berakhir the 2/48th mempertahankan posisi di lembah sebelah barat dari kota Tarakan.
+                    </p>
+                    <p>
+                        Pada tengah malam, garis pertahanan pantai Australia telah diperpanjang hingga mencapai 2.800 yards dari pantai dan 2.000 yards di daratan. Namun, Squad Sniper Jepang ternyata aktif di perimeter ini pada malam 1-2 mei yang menyebabkan 2/2nd Pioneer Battalion harus bertarung
+                        dengan pasukan Jepang pada malam itu. Korban pada pasukan Australia ternyata lebih kecil dari yang diduga, dengan 11 orang meninggal dan 35 terluka. Perlawanan Jepang yang kecil ternyata dikontribusi berkat pengeboman yang gencar pada saat pre-landing yang membuat pasukan
+                        pertahanan Tarakan harus mengabaikan pertahanan di Lingkas. Meskipun pasukan infanteri sukses pada pendaratan di pantai, banyak kendaraan berat terjebak pada pendaratan yang diakibatkan oleh kondisi pantai yang jelek. Banyak kendaraan Australia seperti LSTs terjebak oleh
+                        lumpur dan harus ditinggalkan setelah kesalahan keputusan landing yang dibuat oleh komandan pasukan pada saat itu.
+                    </p>
+                    <p>
+                        Setelah mengamankan daerah garis pantai dan sekitarnya, The 26th Brigade Group melanjutkan perjalanan menuju timur ke kota Tarakan dan utara menuju bandar udara. Tugas untuk mengamankan bandar udara Tarakan diserahkan kepada 2/24th Battalion, dimana serangan mereka pada malam 2 Mei
+                        harus ditunda karena pasukan Jepang menyiapkan beberapa bom disana, bandar udara Tarakan akhirnya berhasil diamankan pada tanggal 5 Mei. Pada minggu pertama invasi, ada 7000 pengungsi indonesia melewati garis pertahanan Australia. Ini merupakan jumlah yang lebih besar dari ekspektasi mereka, dan
+                        banyak pengungsi tersebut yang berada dalam kondisi buruk membuat para unit Civil Affair Belanda menjadi kewalahan. Meskipun serangan pasukan sekutu pada saat itu menciptakan banyak kehancuran di Tarakan, tapi para rakyat Tarakan menyambut pasukan Australia sebagai Pembebas. Nantinya
+                        ratusan rakyat indonesia dipekerjakan sebagai buruh dan kuli untuk pasukan Sekutu
+                    </p>
+                    <hr style="border-top: 1px dashed #8c8b8b;" />
+                    <h2>Conclusion</h2>
+                    <p>
+                        The 26th Brigade Group tetap berada di Tarakan sebagai pasukan penduduk sampai 27 Desember 1945, walaupun banyak unit pasukan tersebut dibubarkan pada bulan October. Pada awal tahun 1946 The 26th Brigade Group kembali ke Australia dan secara formal dibubarkan di Brisbane pada Januari 1946. Tambang minyak Tarakan pun dengan cepat
+                         diperbaiki untuk bisa memproduksi minyak kembali. Teknisi dan insinyur sampai beberapa hari kemudian setelah pendaratan sekutu dan pada tanggal 27 Juni pompa minyak pertama telah berhasil di produksi. Sampai bulan oktober tambang minyak Tarakan telah memproduksi 8.000 barel per hari dan memberikan banyak lowongan kerja 
+                        bagi rakyat Tarakan. Meskipun dalam rapor yang diberikan Komandan "Samuel Elliot Morrison" menyatakan bahwa operasi ini berhasil dengan kekalahan yang minimum, sebetulnya korban dari 26th Brigade tergolong tinggi jika dibandingkan dengan ekspedisi lainnya di perang Borneo. Korban yang dialami 26th Brigade hampir 2 kali dari 9th Divison 
+                        dan 2 Brigade lainnya yang melakukan operasi di Borneo utara dan Balik Papan.
+                    </p>
+                    <div>
+                        <a asp-controller="TarakanBattle" asp-action="getQuestion" class="btn btn-success" id="quizBtn">
+                            <span class="fa fa-play-circle"></span> Mulai Quiz!
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </section>
+    }
+}
+

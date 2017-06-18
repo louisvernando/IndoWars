@@ -1,0 +1,103 @@
+﻿@model IndoWars.ViewModels.UserViewModel
+
+@{
+    ViewBag.Title = "Dutch East Indies Campaign";
+}
+
+@{
+    if (Model.ChapterProgress < 1)
+    {
+        <div class="container">
+            <section style="text-align:center">
+                <h2 class="heading">Maaf anda belum dapat memasuki Chapter ini</h2>
+                <div class="headul"></div>
+                <p class="subheading">Silahkan pilih chapter sebelumnya</p>
+                <a asp-controller="App" asp-action="Index" class="btn btn-success">Home</a>
+            </section>
+        </div>
+    }
+    else
+    {
+        <section>
+            <div class="container">
+                <section>
+                    <a asp-controller="Chapter" asp-action="Introduction" class="btn btn-primary" style="float: left"><i class="fa fa-arrow-left"></i> Prev Chapter</a>
+                    <a asp-controller="Chapter" asp-action="TarakanBattle" class="btn btn-primary" style="float: right">Next Chapter <i class="fa fa-arrow-right"></i></a>
+                </section>
+                <div style="text-align:center"><iframe width="700" height="400" src="https://www.youtube.com/embed/824Rm1XfJ4s" frameborder="0" allowfullscreen></iframe></div>
+                <br />
+                <h1 class="heading">Dutch East Indies Campaign</h1>
+                <div class="headul"></div>
+                <p class="subheading">Ekspedisi Hindia Belanda</p>
+                <section>
+                    <h2>Apa itu Hindia Belanda (Dutch East Indies)?</h2>
+                    <a href="~/img/Ekspedisi Hindia Belanda/hindiabelanda.jpg">
+                        <img class="inviewport animated delay1" data-effect="bounceInBig" src="~/img/Ekspedisi Hindia Belanda/hindiabelanda.jpg"
+                             style="float:right; height: 200px; width: auto; margin-left: 20px;"
+                             title="rumah petugas kolonial Hindia Belanda di tanah merah" data-fancybox-group="gallery" />
+                    </a>
+                    <p>
+                        Hindia Belanda (Yang nantinya kita kenal sebagai Negara Indonesia) merupakan daerah kolonial belanda, yang dibentuk dari Organisasi Hindia Belanda atau yang lebih kita kenal sebagai "VOC" dibawah kepemerintahan belanda pada tahun 1980.
+                        Koloni ini merupakan salah satu dari koloni belanda yang paling berharga, dikarenakan sumber daya alam akan rempah-rempahnya yang begitu melimpah sehingga menciptakan kondisi perdagangan yang
+                        dimonopoli oleh belanda pada awal abad 20. Sebutan "Indonesia" sendiri mulai dipakai pada tahun 1881, dimana pada awal abad 20 para cendekiawan lokal mulai untuk mengembangkan konsep "Indonesia"
+                        sebagai sebuah negara yang pada akhirnya mengawali gerakan kemerdekaan Indonesia
+                    </p>
+                    <hr style="border-top: 1px dashed #8c8b8b;"/>
+                    <h2>Awal keterlibatan Hindia Belanda pada Perang Dunia II</h2>
+                    <a href="~/img/Ekspedisi Hindia Belanda/japanland.jpg">
+                        <img class="inviewport animated delay1" data-effect="bounceInBig" src="~/img/Ekspedisi Hindia Belanda/japanland.jpg"
+                             style="float:right; height: 300px; width: auto; margin-left: 20px;"
+                             title="Pasukan Jepang mendarat di Hindia Belanda" data-fancybox-group="gallery" />
+                    </a>
+                    <p>
+                        Pada tahun 1941-42 Hindia Belanda yang masih dijajah oleh belanda kala itu, diserang oleh Pasukan Jepang saat awal Perang Pasifik Perang Dunia II dimulai. Pasukan sekutu yang berupaya untuk mempertahankan pulau pun gagal dan dikalahkan oleh
+                        Pasukan Jepang. Alasan Hindia Belanda dipilih sebagai target pertama Jepang pada saat itu adalah karena kekayaan sumber daya minyaknya dan perkebunan karet yang akan menjadi asset penting saat perang berlangsung. Pada ekspedisi ini Pasukan Jepang
+                        mengerahkan 4 armada kapal bersama 4 kapal tempur cepat dari kelas "Kongo", 13 kapal penjelajah berat dan banyak kapal penjelajah kecil untuk membantu penyerbuan amfibi bersama serangan yang menargetkan kota, unit kapal dan pusat pengiriman pada area sekitar
+                        Samudera Hindia. Ekspedisi dan penjajahan tiga setengah tahun yang dilakukan jepang pun merupakan faktor utama yang mengakhiri pemerintahan belanda pada daerah itu.
+                    </p>
+                    <hr style="border-top: 1px dashed #8c8b8b;" />
+                    <h2>Deklarasi Perang</h2>
+                    <p>
+                        Pada akhir bulan November, pemerintahan Hindia Belanda mulai mempersiapakan diri untuk perang. Kapal angkatan laut belanda dikerahkan bersama dengan Pasukan Udara KNIL. Namun pada tanggal 4 Desember, 3 hari setelah penentuan kebijakan perang dengan America, Inggris,
+                        dan Belanda, pemerintahan Jepang memutuskan untuk menganggap Belanda sebagai musuh terakhir sampai pertempuran asli terjadi. Keputusan ini dipilih karena adanya harapan agar pasukan Belanda tidak menyerang langsung instalasi minyak pada hindia belanda sebelum Jepang
+                        siap untuk melakukan invasinya. Pada tanggal 8 Desember 1941 dengan proklamasi publik, Belanda mendeklarasi perang terhadap Jepang.
+                    </p>
+                    <hr style="border-top: 1px dashed #8c8b8b;" />
+                    <h2>Battle of Borneo (Perang Borneo)</h2>
+                    <a href="~/img/Ekspedisi Hindia Belanda/borneoutara.jpg">
+                        <img class="inviewport animated delay1" data-effect="bounceInBig" src="~/img/Ekspedisi Hindia Belanda/borneoutara.jpg"
+                             style="float:right; height: 300px; width: auto; margin-left: 20px;"
+                             title="Pasukan Jepang mendarat di Borneo Utara" data-fancybox-group="gallery" />
+                    </a>
+                    <p>
+                        Perang Borneo merupakan penyerangan pertama yang dilakukan oleh pasukan Jepang untuk mengambil alih Kerajaan Sarawak, Brunei, Borneo Utara, dan daerah barat Kalimantan yang merupakan bagian dari Hindia Belanda. Divisi utama yang memimpin perang ini merupakan Brigadir
+                        Infanteri ke-35 yang dipimpin oleh Mayor Jendral Kiyotake Kawaguchi. Penyerangan dimulai pada tanggal 31 December 1941, yang bertujuan untuk mengambil alih Miri dan Seria, dimana pasukan lainnya akan mengakuisisi "Kuching" dan bandar udara didekatnya. Pasukan tersebut
+                        pun melanjutkan perjalannya tanpa ketahuan dan sampai dengan selamat pada tanggal 16 Desember 1941 saat fajar mulai terbit, dan 2 pasukan darat tersebut dengan sukses mengambil alih Miri dan Seria dengan sedikit perlawanan dari Pasukan Inggris. Beberapa jam kemudian
+                        Lutong pun sukes diambil alih juga oleh pasukan Jepang.
+                    </p>
+                    <p>
+                        Pasukan belanda Martin B-10 Bombers pun melakukan penyerangan terhadap sumber pengiriman jepang dari markasnya "Singkawang II" di Miri pada tanggal 17, namun percobaan tersebut gagal.
+                        3 pesawat bomb Dornier Do 24Ks pun mencoba untuk melakukan serangan bantuan, tetapi satu pesawat tersebut ditembak jatuh yang kemungkinan oleh pesawat apung "Kamikawa Maru" dan sisanya melarikan diri dari Pasukan Jepang.
+                        Pada tanggal 22 Desember, pasukan Jepang meninggalkan Miri untuk mencapai Kuching, namun terlihat oleh pesawat belanda X-35 yang langsung mengirimkan radio peringatan kepada armada "HNLMS K XIV" yang berada dibawah komando letnan komanan "Carel A. J van Groeneveld".
+                        Pada jam 20.43 tanggal 23 Desember "K XIV" menyusup masuk ke kapal dan memulai penyerangannya. Pasukan yang membawa "Hiyoshi Maru" dan "Katoki Maru" pun akhirnya ditenggelamkan bersama dengan ratusan pasukan Jepang, namun kapal "Hokkai Maru" berhasil didaratkan di pantai terdekat dan
+                        kapal transport lainnya hanya mengalami kerusakan ringan. Seluruh pasukan lainnya sukses mendarat kecuali 2nd Battalion, "15th Punjab Regiment" yang mencoba untuk melakukan perlawanan namun dikalah jumlahkan dengan pasukan belanda yang membuat mereka kabur menuju sungai.
+                        Pada siang ini, Kuching telah berada di tangan pasukan Jepang.
+                    </p>
+                    <p>
+                        Pada malam 23-24 Desember HNLMS K XVI melakukan serangan torpedo pada kapal Destroyer Jepang "Sagiri" dengan jarak 30 mil dari sudut Utara Kuching, peristiwa ini menjadikan kapal tersebut menjadikan kapal pertama sekutu yang menghancukan kapal perang jepang di perang pasifik ini.
+                        Namun K XVI kehilangan semua peluang dalam perang ini ketika pasukan Jepang menyerang balik menggunakan torpedo dari kapal selam pasukan Jepang. Dan pada tanggal 25 Desember, pasukan Jepang dengan sukses telah mengambil alih bandar udara Kuching, yang membuat "The Punjab Regiment" melarikan diri
+                        menuju hutan di area Singkawang. Setelah Singkawang juga diambil alih oleh pasukan Jepang pada tanggal 29 Desember, seluruh pasukan inggris dan belanda lainnya melarikan diri menuju selatan hutan untuk mencoba mencapai Sampit dan Pangkalanbun, dimana terdapat bandar udara belanda di Kotawaringin.
+                        Kalimantan tengah dan selatan telah diambil alih oleh angkatan laut Jepang yang diikuti dengan serangan dari barat dan timur, kota Pontianak pun akhirnya diambil oleh Jepang pada tanggal 29 Januari 1942. Setelah 10 minggu berada di pergunungan yang dikelilingi hutan belantara, pasukan sekutu akhirnya
+                        menyerah pada tanggal 1 April 1942.
+                    </p>
+                    <div>
+                        <a asp-controller="HindiaBelanda" asp-action="getQuestion" class="btn btn-success" id="quizBtn">
+                            <span class="fa fa-play-circle"></span> Mulai Quiz!
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </section>
+    }
+}
+

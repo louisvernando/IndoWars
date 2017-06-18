@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<section class='padding-top-100 padding-bottom-0'>
+    <div class="container">
+        <div class="row animated inviewport delay5" data-effect="fadeInUp">
+            <h1 class="heading">Introduction</h1>
+            <div class="headul"></div>
+            <p class="subheading">Pengenalan</p>
+            <h2 class="section-heading"><i class="fa fa-hand-o-right"></i> Apa itu IndoWars?</h2>
+            <div>
+                <p>
+                    Indowars merupakan Game Quiz yang bertemakan peran indonesia dalam Perang Dunia ke-2. Pada awal permainan pemain akan memulai dari chapter 1 yang berisikan tentang pengenalan dan kesimpulan dari Perang Dunia ke-2 yang nantinya akan dilanjutkan menjadi awal pertama kalinya indonesia terlibat
+                    dalam perang dunia ke-2 dan akan berlanjut sesuai dengan timeline(alur waktu) yang sesuai dengan fakta yang terjadi di sejarah.
+                </p>
+                <p>
+                    Setelah memilih Chapter, pemain akan melihat naskah cerita yang nantinya tema soal dalam Quiz akan diambil pada cerita tersebut. Setelah pemain membaca naskah cerita dan meklik tombol "Mulai Quiz" dibawah naskah cerita maka pemain akan diantarkan menuju halaman Quiz dimana dihalaman tersebut 
+                    akan berisi 10 buah pertanyaan ganda yang bersangkutan dengan naskah cerita Chapter yang sebelumnya pemain pilih.
+                </p>
+                <p>
+                    Minimal Score yang dibutuhkan pemain agar dapat melanjutkan ke Chapter selanjutnya adalah 70, dan untuk pemain yang belum melakukan proses login maka anda hanya dapat memainkan Chapter 1 saja dan belum dapat melanjutkan ke Chapter berikutnya
+                </p>
+                <a asp-controller="Chapter" asp-action="Introduction" class="btn btn-primary"> Mulai Prolog</a>
+            </div>
+        </div>
+    </div>
+    <!-- Angled Section - Start -->
+    <div class="angled_up_inside white">
+        <div class="slope upleft"></div>
+        <div class="slope upright"></div>
+    </div>
+    <!-- Angled Section - End -->
+</section>
+<section class='bg-primary max-width-100 padding-bottom-0 ' id='News'>
+    <div class="container animated inviewport delay5" data-effect="fadeInLeft">
+        <div class="row">
+            <h1 class="heading text-white left-align">Chapter List</h1>
+            <div class="headul white left-align"></div>
+            <div class="filter-items filter-mixitup  inviewport animated " data-effect="fadeIn" id="gallery-mixitup">
+                <div class="filter-item design col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+                    <img alt="gallery-image" src="~/img/introduction/title.jpg" class="img-responsive transition home-gallery">
+                    <div class="info transition">
+                        <a class="btn btn-primary fancybox" asp-controller="Chapter" asp-action="Introduction"><i class="mdi mdi-arrow-expand"></i></a>
+                    </div>
+                    <p>Chapter 1) Introduction</p>
+                </div>
+                <div class="filter-item full-width design col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+                    <img alt="gallery-image" src="~/img/Ekspedisi Hindia Belanda/title.jpg" class="img-responsive transition home-gallery">
+                    <div class="info transition">
+                        <a class="btn btn-primary fancybox" asp-controller="Chapter" asp-action="HindiaBelanda"><i class="fa fa-sign-in"></i></a>
+                    </div>
+                    <p>Chapter 2) Dutch East Indies</p>
+                </div>
+                <div class="filter-item design col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+                    <img alt="gallery-image" src="~/img/tarakan/title.jpg" class="img-responsive transition">
+                    <div class="info transition">
+                        <a class="btn btn-primary fancybox" asp-controller="Chapter" asp-action="TarakanBattle"><i class="fa fa-sign-in"></i></a>
+                    </div>
+                    <p>Chapter 3) Battle of Tarakan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Angled Section - Start -->
+    <div class="angled_down_outside outside primary lightgray">
+        <div class="slope downleft"></div>
+        <div class="slope downright"></div>
+    </div>
+    <!-- Angled Section - End -->
+</section>
+<section class="animated delay5 inviewport" data-effect="fadeInUp">
+    @Html.Partial("News")
+</section>
