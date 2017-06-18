@@ -17,7 +17,7 @@ namespace IndoWars.Models
             : base(options)
         {
             _config = config;
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         public DbSet<News> News { get; set; }
