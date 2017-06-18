@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IndoWars.ViewModels.ChapterListViewModel
+
+@{
     ViewBag.Title = "Daftar Chapter";
 }
 <section id="Chapter">
@@ -7,26 +9,27 @@
             <h1>Chapter List</h1>
             <div class="divider"></div>
             <p>Daftar Chapter IndoWars</p>
-            @*<table class="table table-striped">
-                    <thead>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="text-align: center"></th>
+                        <th style="text-align: center">Chapter</th>
+                        <th style="text-align: center">Description</th>
+                        <th style="text-align: center">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ChapterLists)
+                    {
                         <tr>
-                            <th style="text-align: center">Type</th>
-                            <th style="text-align: center">Date</th>
-                            <th style="text-align: center">Description</th>
+                            <td><img src="~"@item.Image/></td>
+                            <td>@item.Name</td>
+                            <td>adsadadsadsadad</td>
+                            <td></td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>@item.Type</td>
-                                <td>@item.Date</td>
-                                <td>@item.Description</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>*@
-
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
 </section>

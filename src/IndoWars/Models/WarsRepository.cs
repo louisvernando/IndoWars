@@ -33,6 +33,11 @@ namespace IndoWars.Models
             return _context.News.ToList();
         }
 
+        public IEnumerable<ChapterList> GetChapterLists()
+        {
+            return _context.ChapterLists.ToList();
+        }
+
         public List<qIntroduction> GetQIntroductions(bool isRandom)
         {
             var listofq = GenerateLCM();
@@ -209,7 +214,7 @@ namespace IndoWars.Models
             }
         }
 
-        public UserViewModel GetDbUser(string name)
+        public UserViewModel GetUserViewModel(string name)
         {
             var item = _context.DbUser
                      .Where(t => t.UserName == name)

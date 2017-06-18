@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IndoWars.Models;
+using IndoWars.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -30,14 +31,14 @@ namespace IndoWars.Controllers.Web
         [Authorize]
         public IActionResult HindiaBelanda()
         {
-            var user = _repository.GetDbUser(User.Identity.Name);
+            var user = _repository.GetUserViewModel(User.Identity.Name);
             return View(user);
         }
 
         [Authorize]
         public IActionResult TarakanBattle()
         {
-            var user = _repository.GetDbUser(User.Identity.Name);
+            var user = _repository.GetUserViewModel(User.Identity.Name);
             return View(user);
         }
 
@@ -46,5 +47,20 @@ namespace IndoWars.Controllers.Web
             return View();
         }
 
+        [Route("/Chapterlist")]
+        [Authorize]
+        public IActionResult ChapterList()
+        {
+            var user = _repository.GetUserViewModel(User.Identity.Name);
+            var chapterList = _repository.GetChapterLists();
+
+            var viewModels = new ChapterListViewModel()
+            {
+                ChapterLists = chapterList,
+                Users = user
+            };
+            
+            return View(viewModels);
+        }
     }
 }

@@ -8,9 +8,10 @@ using IndoWars.Models;
 namespace IndoWars.Migrations
 {
     [DbContext(typeof(WarsContext))]
-    partial class WarsContextModelSnapshot : ModelSnapshot
+    [Migration("20170618144837_ChapterList2.0")]
+    partial class ChapterList20
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")

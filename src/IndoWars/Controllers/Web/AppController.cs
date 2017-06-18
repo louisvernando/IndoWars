@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IndoWars.Models;
+using IndoWars.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -31,7 +32,13 @@ namespace IndoWars.Controllers.Web
         public IActionResult Index()
         {
             var news = _repository.GetNews();
-            return View(news);
+            var Chapterlist = _repository.GetChapterLists();
+            var ViewModels = new IndexViewModel()
+            {
+                ChapterLists = Chapterlist,
+                News = news
+            };
+            return View(ViewModels);
         }
 
         public IActionResult About()
@@ -40,12 +47,6 @@ namespace IndoWars.Controllers.Web
         }
 
         public IActionResult Help()
-        {
-            return View();
-        }
-
-        [Authorize]
-        public IActionResult ChapterList()
         {
             return View();
         }
