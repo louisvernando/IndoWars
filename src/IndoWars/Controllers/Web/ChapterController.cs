@@ -42,7 +42,32 @@ namespace IndoWars.Controllers.Web
             return View(user);
         }
 
+        [Authorize]
+        public IActionResult PalembangBattle()
+        {
+            var user = _repository.GetUserViewModel(User.Identity.Name);
+            return View(user);
+        }
+
+        [Authorize]
+        public IActionResult JavaSeaBattle()
+        {
+            var user = _repository.GetUserViewModel(User.Identity.Name);
+            return View(user);
+        }
+
+        [Authorize]
+        public IActionResult TimorBattle()
+        {
+            var user = _repository.GetUserViewModel(User.Identity.Name);
+            return View(user);
+        }
         public IActionResult Introduction()
+        {
+            return View();
+        }
+
+        public IActionResult ChapterOnProgress()
         {
             return View();
         }

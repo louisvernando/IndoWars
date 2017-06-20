@@ -198,20 +198,32 @@ namespace IndoWars.Models
             DbUser user = await _userManager.FindByNameAsync(name);
             IdentityResult id = null;
             if (user != null)
-            { 
-                if (questionId == 0)
-                {
-                    user.ChapterProgress = 1;
-                    id = await _userManager.UpdateAsync(user);
-                    await _context.SaveChangesAsync();
-                }
-                else if (questionId == 1)
-                {
-                    user.ChapterProgress = 2;
-                    id = await _userManager.UpdateAsync(user);
-                    await _context.SaveChangesAsync();
-                }
+            {
+                user.ChapterProgress = questionId;
+                id = await _userManager.UpdateAsync(user);
+                await _context.SaveChangesAsync();
             }
+            //if (user != null)
+            //{ 
+            //    if (questionId == 1)
+            //    {
+            //        user.ChapterProgress = 1;
+            //        id = await _userManager.UpdateAsync(user);
+            //        await _context.SaveChangesAsync();
+            //    }
+            //    else if (questionId == 2)
+            //    {
+            //        user.ChapterProgress = 2;
+            //        id = await _userManager.UpdateAsync(user);
+            //        await _context.SaveChangesAsync();
+            //    }
+            //    else if (questionId == 3)
+            //    {
+            //        user.ChapterProgress = 3;
+            //        id = await _userManager.UpdateAsync(user);
+            //        await _context.SaveChangesAsync();
+            //    }
+            //}
         }
 
         public UserViewModel GetUserViewModel(string name)

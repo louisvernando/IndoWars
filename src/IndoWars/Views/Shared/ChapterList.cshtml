@@ -8,25 +8,35 @@
         <div class="section-heading scrollpoint sp-effect5">
             <h1>Chapter List</h1>
             <div class="divider"></div>
-            <p>Daftar Chapter IndoWars</p>
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th style="text-align: center"></th>
-                        <th style="text-align: center">Chapter</th>
-                        <th style="text-align: center">Description</th>
-                        <th style="text-align: center">Status</th>
+                        <th>Image</th>
+                        <th>Chapter</th>
+                        <th>Description</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.ChapterLists)
-                    {
-                        <tr>
-                            <td><img src="~"@item.Image/></td>
-                            <td>@item.Name</td>
-                            <td>adsadadsadsadad</td>
-                            <td></td>
-                        </tr>
+                    @{
+                        Int32 i = 0;
+                        foreach (var item in Model.ChapterLists)
+                        {
+                            <tr>
+                                <td><img class="home-gallery" src="@item.Image"/></td>
+                                <td>@item.Name</td>
+                                <td>adsadadsadsadad</td>
+                                @if (Model.Users.ChapterProgress < i)
+                                {
+                                    <td><a class="btn btn-danger"><span class="fa fa-lock"></span> Locked</a></td>
+                                }
+                                else
+                                {
+                                    <td><a asp-controller="Chapter" asp-action="@item.ActionName" class="btn btn-success"><span class="fa fa-check"></span> Available</a></td>
+                                }
+                                @{ i++;}
+                            </tr>
+                        }
                     }
                 </tbody>
             </table>

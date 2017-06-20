@@ -36,7 +36,7 @@ namespace IndoWars.Controllers.Api
             AnswerViewModel ans = _repository.GetScore(vm, 0, name);
             if (ans.Score >= 70)
             {
-                await _repository.SaveProgress(0, name);
+                await _repository.SaveProgress(1, name);
             }
             return View("Result", ans);
         }
@@ -48,7 +48,7 @@ namespace IndoWars.Controllers.Api
             AnswerViewModel ans = _repository.GetScore(vm, 1, name);
             if (ans.Score >= 70)
             {
-                await _repository.SaveProgress(1, name);
+                await _repository.SaveProgress(2, name);
             }
             return View("Result", ans);
         }
@@ -60,7 +60,7 @@ namespace IndoWars.Controllers.Api
             AnswerViewModel ans = _repository.GetScore(vm, 2, name);
             if (ans.Score >= 70)
             {
-                await _repository.SaveProgress(2, name);
+                await _repository.SaveProgress(3, name);
             }
             return View("Result", ans);
         }
