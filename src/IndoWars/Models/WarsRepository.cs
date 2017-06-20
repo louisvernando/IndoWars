@@ -270,9 +270,10 @@ namespace IndoWars.Models
             return user;
         }
 
-        public async Task RegisterAccount(RegisterViewModel vm)
+        public async Task<Dictionary<string, int>> RegisterAccount(RegisterViewModel vm)
         {
-            if (await _userManager.FindByEmailAsync(vm.Email) == null)
+            Dictionary<string, int> result = new Dictionary<string, int>();
+            if (await _userManager.FindByNameAsync(vm.Username) == null)
             {
                 var user = new DbUser()
                 {
@@ -281,11 +282,14 @@ namespace IndoWars.Models
                     ChapterProgress = 0
                 };
                 await _userManager.CreateAsync(user, vm.Password);
-                
+                result.Add("Success",0);
+                return result;
             }
             else
             {
-                _logger.LogError("Email is already Used");
+                _logger.LogError("Sorry this Username already Used");
+                result.Add("Failed", 0);
+                return result;
             }
         }
     }

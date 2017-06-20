@@ -91,10 +91,22 @@ namespace IndoWars.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _repository.RegisterAccount(vm);
+                var result = await _repository.RegisterAccount(vm);
+                if (result.ContainsKey("Success"))
+                {
+                    return RedirectToAction("Login", "Auth");
+                }
+                else
+                { 
+                    ModelState.AddModelError("", "Sorry this UserName already taken");
+                    return View();
+                }
+            }
+            else
+            { 
+                return View();
             }
 
-            return RedirectToAction("Login", "Auth");
         }
     }
 }

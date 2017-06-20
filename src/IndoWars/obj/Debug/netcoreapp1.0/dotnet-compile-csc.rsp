@@ -223,6 +223,8 @@
 "D:\Source\IndoWars\src\IndoWars\Migrations\20170618144837_ChapterList2.0.Designer.cs"
 "D:\Source\IndoWars\src\IndoWars\Migrations\20170619111255_Add3Chapters.cs"
 "D:\Source\IndoWars\src\IndoWars\Migrations\20170619111255_Add3Chapters.Designer.cs"
+"D:\Source\IndoWars\src\IndoWars\Migrations\20170620153129_AddDescOnChapterLists.cs"
+"D:\Source\IndoWars\src\IndoWars\Migrations\20170620153129_AddDescOnChapterLists.Designer.cs"
 "D:\Source\IndoWars\src\IndoWars\Migrations\WarsContextModelSnapshot.cs"
 "D:\Source\IndoWars\src\IndoWars\Models\aHindiaBelanda.cs"
 "D:\Source\IndoWars\src\IndoWars\Models\aIntroduction.cs"

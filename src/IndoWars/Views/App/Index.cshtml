@@ -4,12 +4,11 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<section class='padding-top-100 padding-bottom-0'>
-    <div class="container">
+<section>
+    <div class="container padding-bottom-0">
         <div class="row animated inviewport delay5" data-effect="fadeInUp">
             <h1 class="heading">Introduction</h1>
             <div class="headul"></div>
-            <p class="subheading">Pengenalan</p>
             <h2 class="section-heading"><i class="fa fa-hand-o-right"></i> Apa itu IndoWars?</h2>
             <div>
                 <p>
@@ -23,7 +22,7 @@
                 <p>
                     Minimal Score yang dibutuhkan pemain agar dapat melanjutkan ke Chapter selanjutnya adalah 70, dan untuk pemain yang belum melakukan proses login maka anda hanya dapat memainkan Chapter 1 saja dan belum dapat melanjutkan ke Chapter berikutnya
                 </p>
-                <a asp-controller="Chapter" asp-action="Introduction" class="btn btn-primary"> Mulai Prolog</a>
+                <a asp-controller="Chapter" asp-action="Introduction" class="btn btn-lg btn-block btn-success"><span class="fa fa-play-circle"></span> Mulai Prologue</a>
             </div>
         </div>
     </div>
@@ -51,9 +50,6 @@
                     </div>
 
                 }
-                <div class="filter-item design col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
-                    <img alt="gallery-image" src="~/img/introduction/title.jpg" class="img-responsive transition home-gallery">
-                </div>
             </div>
         </div>
     </div>
@@ -68,14 +64,13 @@
     <div class="container">
         <div class="section-heading scrollpoint sp-effect2">
             <h1>News</h1>
-            <div class="divider"></div>
-            <p>IndoWars Update and News</p>
+            <div class="headul red left-align"></div>
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th style="text-align: center">Type</th>
-                    <th style="text-align: center">Date</th>
-                    <th style="text-align: center">Description</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Description</th>
                 </tr>
                 </thead>
                 <tbody>

@@ -186,6 +186,10 @@ a,
     animation-delay: .9s;
 }
 
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
 .margin-bottom-25 {
     margin-bottom: 25px;
 }
@@ -229,7 +233,7 @@ section .heading.left-align {
 }
 
 section .headul {
-    margin: 50px auto 42px auto;
+    margin: 0px auto 42px auto;
 }
 
 section.bg-image .headul:before,
@@ -340,7 +344,7 @@ section.full-width .container {
 section .container {
     position: relative;
     z-index: 20;
-    padding: 125px 15px;
+    padding: 50px 15px;
     /*       border-right: 1px solid #ff00ff;
        border-left: 1px solid #ff00ff;*/
 }
@@ -3884,6 +3888,7 @@ section.services .angled_down_outside{
 .filter-mixitup .filter-item {
     padding: 0px;
     overflow: hidden;
+    width: 360px;
 }
 
 .filter-isotope .filter-item img,
@@ -4090,7 +4095,7 @@ form input {
     border: 1px solid rgba(255, 255, 255, 0.5);
     height: 50px;
     padding: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 form textarea {

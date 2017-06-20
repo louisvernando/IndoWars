@@ -13,7 +13,7 @@ namespace IndoWars.Models
         List<qIntroduction> GetQIntroductions(bool isRandom);
         List<qHindiaBelanda> GetQHindiaBelanda(bool isRandom);
         List<qTarakanBattle> GetQTarakanBattle(bool isRandom);
-        Task RegisterAccount(RegisterViewModel vm);
+        Task<Dictionary<string, int>> RegisterAccount(RegisterViewModel vm);
         AnswerViewModel GetScore(QuestionViewModel vm, int questionId, string name);
         UserViewModel GetUserViewModel(string name);
         Task SaveProgress(int questionId, string name);
